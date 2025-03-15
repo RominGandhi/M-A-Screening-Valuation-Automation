@@ -1,4 +1,4 @@
-# 📊 Mergers & Acquisitions (M&A) Valuation & Screening 🚀 *(In Progress)*
+# 📊 Mergers & Acquisitions (M&A) Valuation & Screening 🚀
 
 ## 🏆 Overview
 This project focuses on the valuation and screening of potential acquisition targets using **Discounted Cash Flow (DCF) analysis, Comparable Company Analysis (CCA), and financial ratio analysis**. The goal is to identify suitable M&A candidates based on intrinsic and relative valuation metrics.
