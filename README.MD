@@ -71,11 +71,4 @@ This project focuses on the valuation and screening of potential acquisition tar
 
 ## 👥 Contributors
 - **Romin Gandhi** (Lead Developer, Finance & Valuation Modeling)
-- [Add any collaborators here]
-
-## 📜 License
-This project is licensed under the MIT License. See `LICENSE` for details.
-
-## 📬 Contact
-For questions or feedback, reach out via [your email] or LinkedIn: [Your LinkedIn URL].
 
