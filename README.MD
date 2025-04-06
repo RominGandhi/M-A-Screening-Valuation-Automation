@@ -1,74 +1,86 @@
-# 📊 Mergers & Acquisitions (M&A) Valuation & Screening 🚀
+# 📊 U.S. Public Company Valuation Model — DCF + CCA Automation
 
-## 🏆 Overview
-This project focuses on the valuation and screening of potential acquisition targets using **Discounted Cash Flow (DCF) analysis, Comparable Company Analysis (CCA), and financial ratio analysis**. The goal is to identify suitable M&A candidates based on intrinsic and relative valuation metrics.
+This repository presents a professional-grade valuation model designed for **any publicly traded U.S. company**, integrating both **Discounted Cash Flow (DCF)** and **Comparable Company Analysis (CCA)** methodologies. The model includes a macro-enabled Excel template dynamically populated using Python, with valuation commentary and peer benchmarking fully automated.
 
-## ✨ Features
-- 🔢 **DCF Model**: Automates the calculation of enterprise value by forecasting future cash flows and discounting them using the Weighted Average Cost of Capital (WACC).
-- 📈 **Comparable Company Analysis (CCA)**: Benchmarks target companies against industry peers using key valuation multiples.
-- 📊 **Financial Ratios**: Assesses company health and profitability through metrics such as P/E, EV/EBITDA, ROE, ROA, and Debt-to-Equity.
-- ⚙️ **Automated Data Retrieval**: Fetches financial data from APIs and processes input files for real-time analysis.
-- 🎯 **Sensitivity Analysis**: Provides valuation ranges based on different assumptions for growth rate, WACC, and terminal value.
+> 💡 Example included: Alphabet Inc. (GOOGL)
 
-## 🔍 Methodology
-### 1️⃣ Data Collection
-- 🏦 Financial statements and market data are sourced from APIs such as **Yahoo Finance, Alpha Vantage, or Bloomberg Terminal**.
-- 📂 User-uploaded CSV files can also serve as input for analysis.
+---
 
-### 2️⃣ Discounted Cash Flow (DCF) Model
-- 📊 Extracts historical **EBIT**, **Depreciation & Amortization**, **Capital Expenditures**, and **Changes in Working Capital**.
-- 🔮 Forecasts Free Cash Flow to the Firm (FCFF) over a 5-year period.
-- 🏛 Determines Terminal Value using the **Gordon Growth Model**.
-- 💰 Calculates Enterprise Value by discounting FCFF at the **Weighted Average Cost of Capital (WACC)**.
+## 📈 Key Features
 
-### 3️⃣ Comparable Company Analysis (CCA)
-- 📌 Identifies peer companies within the same industry.
-- 📉 Computes valuation multiples:
-  - 📊 **EV/EBITDA** (Enterprise Value to EBITDA)
-  - 💲 **P/E Ratio** (Price to Earnings)
-  - 📘 **P/B Ratio** (Price to Book)
-  - 🏭 **EV/Sales** (Enterprise Value to Sales)
-- ⚖️ Compares the target company’s multiples with industry averages.
+- 🔄 **Automated Excel population** using Python (`xlwings`)
+- 📊 **Comparable Company Analysis (CCA)** with:
+  - EV/Sales
+  - EV/EBITDA
+  - EV/EBIT
+  - P/E multiples
+- 📉 **Discounted Cash Flow (DCF)** model with:
+  - Forecasted financials
+  - WACC and terminal value assumptions
+  - Present value of free cash flow
+- 💬 **Dynamic valuation commentary** (e.g., "Alphabet Inc. appears undervalued by ~67% based on its peer-derived implied valuation.")
+- 📈 **Professional visuals**: bar charts, valuation breakdowns, and share price comparison
+- ⚙️ **JSON-based data loading** to keep input clean, auditable, and API-ready
 
-### 4️⃣ Financial Ratio Analysis
-- 📈 **Profitability Metrics**: ROE (Return on Equity), ROA (Return on Assets), Gross Margin
-- 💳 **Leverage Ratios**: Debt-to-Equity, Interest Coverage Ratio
-- 💵 **Liquidity Ratios**: Current Ratio, Quick Ratio
+---
 
-### 5️⃣ Screening & Decision Framework
-- 📊 Ranks companies based on valuation attractiveness and financial stability.
-- ❌ Applies filters to exclude companies with excessive debt, declining profitability, or overvaluation.
+## 🧾 How It Works
 
-## 🛠️ Usage
-### 📌 Prerequisites
-- 🐍 **Python 3.x**
-- 📦 Libraries: `pandas`, `numpy`, `scipy`, `matplotlib`, `yfinance` (or `alpha_vantage` for API data)
+### 🔹 Input Files
+- `symbol_comparable_analysis.json`: includes company and peer financials and multiples
+- `symbol_financials.json`: includes income statement, balance sheet, and stock quote data
 
-### ▶️ Running the Project
-1️⃣ Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/mna-valuation.git
-   cd mna-valuation
-   ```
-2️⃣ Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3️⃣ Run the valuation script:
-   ```bash
-   python main.py --target "AAPL" --method "DCF"
-   ```
+### 🔹 Python Script
+- Parses both JSON files
+- Writes target company and peer metrics to a pre-formatted Excel template
+- Fills in assumptions (e.g., shares outstanding, net income, current price)
+- Generates automated commentary and calculations for implied price/share
 
-## 📤 Outputs
-- 📄 **Valuation Report** (PDF/CSV): Summarizes key findings, including intrinsic valuation and relative analysis.
-- 📊 **Graphs & Charts**: Visual representation of financial metrics and valuation ranges.
-- 🏆 **Decision Scorecard**: Provides an M&A recommendation based on a weighted scoring system.
+### 🔹 Excel Template (`.xlsm`)
+- Pre-built valuation model with formulas and visuals
+- CCA section dynamically updates with input
+- DCF includes unlevered free cash flow forecast and terminal value
+- Implied price/share and over/undervaluation commentary appear automatically
 
-## 🚀 Future Enhancements
-- 🎲 **Monte Carlo Simulation** for probabilistic DCF modeling.
-- 🤖 **Machine Learning Integration** to enhance screening accuracy.
-- 🌐 **Web Interface** for interactive valuation and reporting.
+---
 
-## 👥 Contributors
-- **Romin Gandhi** (Lead Developer, Finance & Valuation Modeling)
+## 🧪 Example Output (GOOGL)
+
+- Median P/E of peers: **30.72x**
+- Implied equity value: **$3.07T**
+- Shares outstanding: **12.2B**
+- Implied price/share: **$251.89**
+- Current price: **$150.72**
+
+> **Result:**  
+> `Alphabet Inc. Class A appears undervalued by approximately 67% based on its peer-derived implied valuation.`
+
+---
+
+## 🧰 Tools Used
+
+| Tool        | Purpose                            |
+|-------------|------------------------------------|
+| **Python**  | Automation via `xlwings` and `json`|
+| **Excel**   | Template model & formatting        |
+| **CFI + IC**| Source of original template format |
+
+---
+
+## 🏗 Template Attribution
+
+> 📌 The original Excel structure was based on templates from  
+> - [Corporate Finance Institute (CFI)](https://corporatefinanceinstitute.com)  
+> - Educational resources from **Investment Club (IC)** communities  
+>  
+> 🛠 However, this version was **heavily customized** to include:
+> - Automated Python integration
+> - Enhanced formatting
+> - Additional input cells and logic
+> - Custom commentary generation
+> - Graph-ready data layouts
+
+---
+
+## 🗂 Project Structure
 
