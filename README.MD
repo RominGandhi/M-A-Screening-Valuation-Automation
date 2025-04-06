@@ -1,4 +1,4 @@
-# 📊 U.S. Public Company Valuation Model — DCF + CCA Automation
+# 📊 U.S. Public Company Valuation Model — DCF, CCA & WACC Automation
 
 This repository presents a professional-grade valuation model designed for **any publicly traded U.S. company**, integrating both **Discounted Cash Flow (DCF)** and **Comparable Company Analysis (CCA)** methodologies. The model includes a macro-enabled Excel template dynamically populated using Python, with valuation commentary and peer benchmarking fully automated.
 
