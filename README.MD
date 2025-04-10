@@ -1,5 +1,5 @@
 
-#Valuation & Financial Modeling Platform (with DCF + CCA Automation)
+# Valuation & Financial Modeling Platform (with DCF + CCA Automation)
 
 This repository contains a web-based financial modeling dashboard built with Streamlit, offering integrated Discounted Cash Flow (DCF) and Comparable Company Analysis (CCA) capabilities. The tool enables users to fetch, visualize, and analyze financial data for U.S. public companies. It also allows for the automation of Excel-based valuation models using real-time market and fundamental data retrieved via external APIs.
 
