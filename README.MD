@@ -148,14 +148,6 @@ Then visit `http://localhost:8501`.
 
 ---
 
-## 🧠 Potential Enhancements
-
-- Valuation multiples (e.g., P/E, EV/EBITDA)
-- Sector benchmarking
-- PDF report export
-- Global company support
-
----
 
 ## 🤝 Contributions
 
@@ -163,8 +155,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ---
 
-## 📫 Contact
 
-Built by **Romin Gandhi**  
-📧 romingandhi.work@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/romingandhi)
