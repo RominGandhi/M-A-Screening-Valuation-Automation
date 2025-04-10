@@ -1,104 +1,170 @@
 
-# 💼 Valuation & Financial Modeling Platform  
+# 💼 Valuation and Financial Modeling Platform
 
-This repository hosts a powerful **web-based financial modeling dashboard** built with **Streamlit**, offering automated **Discounted Cash Flow (DCF)** and **Comparable Company Analysis (CCA)** workflows. Designed for finance professionals, analysts, and students, the tool streamlines company valuation using **real-time market data**, **machine learning models**, and **Excel automation**.
-
----
-
-## 🎯 Overview
-
-The platform integrates:
-
-- 📈 **Real-time data retrieval** from Alpha Vantage, Financial Modeling Prep (FMP), and Yahoo Finance  
-- 🤖 **Peer company identification** via OpenAI GPT  
-- 📊 **Interactive visualizations** with Altair  
-- 🧾 **Excel-based financial model automation** using xlwings  
-- 📁 **Support for custom JSON uploads** with automatic parsing and metric generation  
+A professional-grade **web-based financial modeling dashboard** powered by **Streamlit**, automating **Discounted Cash Flow (DCF)** and **Comparable Company Analysis (CCA)**. This tool enables **finance professionals**, **analysts**, and **students** to evaluate public companies using **real-time financial data**, **machine learning**, and **Excel-based models** — all in a user-friendly interface.
 
 ---
 
-## 🖥️ User Interface (UI)
+## 🎯 What This Platform Does
 
-A sleek, interactive dashboard allows users to easily toggle between data sources, upload custom files, and visualize key metrics.
+- 🔄 **Automates** DCF & CCA models in Excel
+- 📡 **Fetches live data** from Alpha Vantage, FMP, and Yahoo Finance
+- 🧠 Uses **OpenAI GPT** to generate peer companies
+- 🧾 Parses financial statements to extract valuation inputs
+- 📈 Displays clean **interactive charts**
+- 📤 Accepts **uploaded financial JSON files**
+
+---
+
+## 🖼️ Demo
 
 ![Demo](exampleUI.gif)
 
 ---
 
-## 🚀 Key Features
+## 🛠️ Features
 
-### 1. 🔍 Streamlit-Powered Web Interface  
-- Sidebar navigation for workflow selection  
-- Dynamic inputs for ticker symbols and file uploads  
-- Clean, responsive layout with real-time interactivity  
+### ✅ Streamlit-Powered Interface
+- Sidebar for ticker entry, file uploads, and API key management
+- Live preview of metrics and peer comparisons
+- Responsive, browser-based dashboard
 
-### 2. 📊 Financial Data Retrieval  
-- **Alpha Vantage API**:  
-  - Balance Sheet  
-  - Income Statement  
-  - Cash Flow Statement  
-  - Company Overview  
-  - Real-Time Quotes  
-- **FMP API**: Peer company financials  
-- **Yahoo Finance**: Historical stock chart data  
+### ✅ Data Sources
+- **Alpha Vantage**: Financial statements, quotes, and company overview
+- **Financial Modeling Prep**: Peer company financials
+- **Yahoo Finance**: OHLC stock price data
+- **OpenAI**: Sector-based peer generation using GPT
 
-### 3. 🧠 Comparable Company Analysis (CCA)  
-- Peer companies generated via **OpenAI GPT** based on sector and profile  
-- Calculates and displays key metrics:  
-  - Market Cap, Enterprise Value  
-  - Revenue, EBITDA, EBIT, Net Income  
-- Overview of sector, competitors, and relative financial health  
-
-### 4. 📉 Discounted Cash Flow (DCF) Modeling  
-- Parses uploaded or fetched financial data  
-- Extracts:  
-  - Revenue, COGS, OPEX, D&A, CAPEX, Working Capital  
-- Automatically writes structured inputs into **pre-formatted Excel templates**  
-
-### 5. 📈 Interactive Stock Charts  
-- OHLC charts spanning the last 5 years  
-- Toggle between multiple financial and valuation metrics  
-- Cleanly integrated into the dashboard  
-
-### 6. 🧾 Excel Automation (via `xlwings`)  
-- Populates **DCF** and **CCA** worksheets with one click  
-- Fills in formulas, assumptions, peer tables, and output valuation metrics  
-- Seamlessly updates macro-enabled Excel models for any public U.S. company  
+### ✅ Excel Model Integration
+- Fills a prebuilt macro-enabled Excel sheet using `xlwings`
+- Extracts:
+  - Revenue, COGS, OPEX, D&A, CAPEX
+  - Changes in Operating Working Capital (ΔOWC)
+  - Cost of Debt, Tax Rate, Size Premium
+- Populates peer tables and output valuation fields
 
 ---
 
-## 📁 Project Structure
+## 🧠 Example Use Case
 
-```bash
+> You’re analyzing **Apple Inc. (AAPL)** for a valuation project.
+1. Launch the app
+2. Enter the ticker `AAPL` and hit **Fetch**
+3. The app:
+   - Pulls AAPL’s financial data
+   - Uses GPT to find comparable peers like MSFT, GOOG, etc.
+   - Extracts valuation inputs and updates an Excel model
+4. Download the fully populated **DCF Excel file** for boardroom-ready reporting
+
+---
+
+## 📁 Folder Structure
+
+```
 .
-├── app.py                                # Main Streamlit app
-├── data_fetcher.py                       # Pulls Alpha Vantage financial data
-├── comparable_company_analysis.py        # OpenAI + peer analysis
-├── stock_chart.py                        # OHLC data and chart generation
-├── dcfExcel.py                           # DCF Excel writer
-├── dcfModel.py                           # DCF model logic and calculations
-├── ccaExcel.py                           # CCA Excel automation
-├── style.css                             # Custom Streamlit styling
-├── data/                                 # Stored JSONs from API or uploads
-│   ├── META_financials.json
-│   ├── META_chart.json
-│   └── META_comparable_analysis.json
+├── app.py                                # Streamlit app entry point
+├── data_fetcher.py                       # Alpha Vantage data fetcher
+├── dcfModel.py                           # Logic for DCF variable extraction
+├── dcfExcel.py                           # Writes DCF data to Excel template
+├── comparable_company_analysis.py        # GPT-based peer generator
+├── ccaExcel.py                           # Excel automation for peer data
+├── stock_chart.py                        # Historical OHLC stock data
+├── style.css                             # UI styling
 ├── models/
-│   └── valuation.xlsm                    # Excel model used for automation
+│   └── valuation.xlsm                    # Preformatted Excel model
+├── data/
+│   ├── META_financials.json              # Sample input
+│   ├── META_comparable_analysis.json     # GPT peer output
+│   └── META_chart.json                   # OHLC chart data
 ├── log data/
-│   └── META_calculation_data.txt         # Raw DCF calculation log
+│   └── AAPL_calculation_data.txt         # DCF variable logs
 ```
 
 ---
 
-## 📌 Notes  
-- Currently supports **U.S. public companies** only  
-- Requires valid API keys for [Alpha Vantage](https://www.alphavantage.co), [FMP](https://financialmodelingprep.com), and [OpenAI](https://openai.com)  
-- Excel macros must be **enabled** for full functionality  
+## 🚀 Getting Started
+
+### 🔧 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/valuation-platform.git
+cd valuation-platform
+```
+
+### 🧪 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 🔑 3. Set Up API Keys
+
+Create a `.env` file:
+
+```env
+ALPHA_VANTAGE_API_KEY=your_alpha_key
+FMP_API_KEY=your_fmp_key
+OPENAI_API_KEY=your_openai_key
+```
+
+### ▶️ 4. Run the App
+
+```bash
+streamlit run app.py
+```
+
+Then visit `http://localhost:8501`.
 
 ---
 
-## 📬 Coming Soon  
-- Relative Valuation Multiples (P/E, EV/EBITDA, etc.)  
-- Sector benchmarking and valuation summaries  
-- Enhanced UI with multi-company dashboards  
+## ⚙️ Requirements
+
+- Python 3.9+
+- Microsoft Excel (for `xlwings` integration)
+- Internet connection
+- Excel macros **must be enabled**
+
+---
+
+## 📌 Currently Supported
+
+- ✔ U.S. public companies
+- ✔ Real-time valuation using financial statements
+- ✔ Automated Excel DCF + CCA modeling
+
+---
+
+## 🧰 Technologies Used
+
+| Technology         | Purpose                          |
+|--------------------|----------------------------------|
+| **Streamlit**      | Web interface                    |
+| **Python**         | Core logic and API integration   |
+| **Alpha Vantage**  | Financial data                   |
+| **FMP**            | Peer company metrics             |
+| **OpenAI GPT**     | Peer identification              |
+| **xlwings**        | Excel model population           |
+| **Altair**         | Chart visualization              |
+
+---
+
+## 🧠 Potential Enhancements
+
+- Valuation multiples (e.g., P/E, EV/EBITDA)
+- Sector benchmarking
+- PDF report export
+- Global company support
+
+---
+
+## 🤝 Contributions
+
+Pull requests are welcome. For major changes, please open an issue first to discuss your proposal.
+
+---
+
+## 📫 Contact
+
+Built by **Romin Gandhi**  
+📧 romingandhi.work@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/romingandhi)
