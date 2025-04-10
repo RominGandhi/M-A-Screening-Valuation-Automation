@@ -73,5 +73,5 @@ The application streamlines the valuation process by combining:
 ├── models/
 │   └── valuation.xlsm                    # Macro-enabled Excel file used for modeling
 ├── log data/
-│   └── {TICKER}_calculation_data.txt
+│   └── {TICKER}_calculation_data.txt     # All raw calculations for DCF Model 
 `
