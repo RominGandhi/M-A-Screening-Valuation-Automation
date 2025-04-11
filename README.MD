@@ -40,6 +40,7 @@ Automated peer analysis via OpenAI and financial modeling.
 
 ### 📌 4. DCF Excel Model   
 Generated macro-enabled Excel model populated with target company financials.
+Note: Full DCF model not shown due to the extensive number of inputs, calculations, and valuation schedules.
 
 ![DCF Excel](images/dcf_excel_output.png)
 
