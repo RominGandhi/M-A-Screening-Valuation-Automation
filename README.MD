@@ -31,21 +31,21 @@ Live metrics and valuation inputs shown for the selected ticker after upload/fet
 
 ---
 
-### 📌 3. Comparable Company Analysis (CCA)  
+### 📌 3. Comparable Companies
 Automated peer analysis via OpenAI and financial modeling.
 
 ![Peer Comparison](images/cca_display.png)
 
 ---
 
-### 📌 4. DCF Excel Model Output  
+### 📌 4. DCF Excel Model   
 Generated macro-enabled Excel model populated with target company financials.
 
 ![DCF Excel](images/dcf_excel_output.png)
 
 ---
 
-### 📌 5. CCA Excel Model Output  
+### 📌 5. CCA Excel Model   
 Peer financials and ratios auto-filled in a CCA template.
 
 ![CCA Excel](images/cca_excel_output.png)
