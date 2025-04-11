@@ -31,22 +31,22 @@ Live metrics and valuation inputs shown for the selected ticker after upload/fet
 
 ---
 
-### 📌 3. Comparable Companies
+### 📌 3. Comparable Companies  
 Automated peer analysis via OpenAI and financial modeling.
 
 ![Peer Comparison](images/cca_display.png)
 
 ---
 
-### 📌 4. DCF Excel Model   
-Generated macro-enabled Excel model populated with target company financials.
+### 📌 4. DCF Excel Model  
+Generated macro-enabled Excel model populated with target company financials.  
 Note: Full DCF model not shown due to the extensive number of inputs, calculations, and valuation schedules.
 
 ![DCF Excel](images/dcf_excel_output.png)
 
 ---
 
-### 📌 5. CCA Excel Model   
+### 📌 5. CCA Excel Model  
 Peer financials and ratios auto-filled in a CCA template.
 
 ![CCA Excel](images/cca_excel_output.png)
@@ -92,3 +92,94 @@ Peer financials and ratios auto-filled in a CCA template.
 
 ## 📁 Folder Structure
 
+```
+.
+├── app.py                                # Streamlit app entry point
+├── data_fetcher.py                       # Alpha Vantage data fetcher
+├── dcfModel.py                           # Logic for DCF variable extraction
+├── dcfExcel.py                           # Writes DCF data to Excel template
+├── comparable_company_analysis.py        # GPT-based peer generator
+├── ccaExcel.py                           # Excel automation for peer data
+├── stock_chart.py                        # Historical OHLC stock data
+├── style.css                             # UI styling
+├── models/
+│   └── valuation.xlsm                    # Preformatted Excel model
+├── data/
+│   ├── META_financials.json              # Sample input
+│   ├── META_comparable_analysis.json     # GPT peer output
+│   └── META_chart.json                   # OHLC chart data
+├── log data/
+│   └── AAPL_calculation_data.txt         # DCF variable logs
+```
+
+---
+
+## 🚀 Getting Started
+
+### 🔧 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/valuation-platform.git
+cd valuation-platform
+```
+
+### 🧪 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 🔑 3. Set Up API Keys
+
+Create a `.env` file:
+
+```env
+ALPHA_VANTAGE_API_KEY=your_alpha_key
+FMP_API_KEY=your_fmp_key
+OPENAI_API_KEY=your_openai_key
+```
+
+### ▶️ 4. Run the App
+
+```bash
+streamlit run app.py
+```
+
+Then visit `http://localhost:8501`.
+
+---
+
+## ⚙️ Requirements
+
+- Python 3.9+  
+- Microsoft Excel (for `xlwings` integration)  
+- Internet connection  
+- Excel macros **must be enabled**  
+
+---
+
+## 📌 Currently Supported
+
+- ✔ U.S. public companies  
+- ✔ Real-time valuation using financial statements  
+- ✔ Automated Excel DCF + CCA modeling  
+
+---
+
+## 🧰 Technologies Used
+
+| Technology         | Purpose                          |
+|--------------------|----------------------------------|
+| **Streamlit**      | Web interface                    |
+| **Python**         | Core logic and API integration   |
+| **Alpha Vantage**  | Financial data                   |
+| **FMP**            | Peer company metrics             |
+| **OpenAI GPT**     | Peer identification              |
+| **xlwings**        | Excel model population           |
+| **Altair**         | Chart visualization              |
+
+---
+
+## 🤝 Contributions
+
+Pull requests are welcome. For major changes, please open an issue first to discuss your proposal.
