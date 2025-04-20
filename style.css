@@ -1,0 +1,80 @@
+body {
+    background-color: #000000;
+    color: white;
+}
+
+.stApp {
+    background-color: #000000;
+    color: white;
+}
+
+.stMarkdown, .stTextInput>div>div>input, .stTextInput>div>div>div {
+    color: white !important;
+
+}
+
+.stTextInput>label {
+    color: white !important;
+}
+
+.stButton>button {
+    background-color: #333333;
+    color: white;
+    border: 1px solid #666;
+    padding: 0.5em 1.5em;
+    font-size: 16px;
+}
+
+.stButton>button:hover {
+    background-color: #444444;
+}
+
+.stSpinner > div {
+    color: white !important;
+}
+
+/* Make text inputs and buttons full width */
+input, .stTextInput > div {
+    width: 100% !important;
+}
+
+.stButton > button {
+    width: 100% !important;
+}
+
+/* Custom Streamlit Styling */
+body {
+    background-color: #0e1117;
+    color: white;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+/* === Default Button Style === */
+.stButton > button {
+    background-color: #1f77b4 !important;
+    color: white !important;
+    font-weight: 500 !important;
+    padding: 0.45rem 1rem !important;
+    border: none !important;
+    border-radius: 6px !important;
+    transition: 0.2s ease-in-out !important;
+    font-size: 0.9rem !important;
+}
+
+.stButton > button:hover {
+    background-color: #135e96 !important;
+    color: white !important;
+    transform: scale(1.03) !important;
+    cursor: pointer !important;
+}
+
+.stButton > button:focus,
+.stButton > button:active {
+    background-color: #104e78 !important;
+    color: white !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(31, 119, 180, 0.5) !important;
+}
+
