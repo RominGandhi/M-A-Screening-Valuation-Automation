@@ -1,0 +1,93 @@
+ Last Fiscal Year: 2024
+
+ Corporate Tax Rate Calculation:
+Income Before Tax: $119,815,000,000
+Income Tax Expense: $19,697,000,000
+Tax Rate = 19,697,000,000 ÷ 119,815,000,000 = 16.44%
+
+ Market Cap: $1,786,628,538,000 → Size Premium: 0.00%
+ 2024A Net Sales (Total Revenue): $348,963,000,000
+
+ Net Sales (Total Revenue):
+2023A: $305,559,000,000
+2022A: $281,279,000,000
+2021A: $257,637,000,000
+
+ Revenue Growth from 2021 to 2022: 9.18%
+
+ COGS (Cost of Goods Sold):
+2024A: $146,306,000,000
+2023A: $133,332,000,000
+2022A: $126,203,000,000
+2021A: $110,939,000,000
+
+ Operating Expenses (OPEX):
+2024A: $91,735,000,000
+2023A: $93,702,000,000
+2022A: $81,791,000,000
+2021A: $67,984,000,000
+
+ Depreciation & Amortization:
+2024A: $413,000,000
+2023A: $469,000,000
+2022A: $13,475,000,000
+2021A: $12,441,000,000
+  Ticker           Company Name  ...  Market Value of Debt ($)  Tax Rate
+0   AAPL             Apple Inc.  ...              8.911600e+16    0.2409
+1   MSFT  Microsoft Corporation  ...              4.881200e+16    0.1823
+2   AMZN       Amazon.com, Inc.  ...              5.683200e+16    0.1350
+3   META   Meta Platforms, Inc.  ...              5.171000e+15    0.1175
+4   NFLX          Netflix, Inc.  ...              7.778071e+15    0.1258
+
+[5 rows x 6 columns]
+
+
+ EBIT and EBITDA for the Past 4 Fiscal Years:
+
+Fiscal Year 2024:
+  EBIT:   $112,390,000,000
+  EBITDA: $120,422,000,000
+
+Fiscal Year 2023:
+  EBIT:   $86,025,000,000
+  EBITDA: $86,494,000,000
+
+Fiscal Year 2022:
+  EBIT:   $71,685,000,000
+  EBITDA: $91,333,000,000
+
+Fiscal Year 2021:
+  EBIT:   $91,080,000,000
+  EBITDA: $103,521,000,000
+
+
+ Cost of Debt (Rd): 1.62%
+ After-Tax Cost of Debt: 1.35%
+
+ Capital Expenditures (Capex):
+2024A: $52,535,000,000
+2023A: $32,251,000,000
+2022A: $31,485,000,000
+2021A: $24,640,000,000
+
+ Operating Working Capital (OWC) and Change (ΔOWC):
+2024A - OWC: $-4,363,000,000
+2023A - OWC: $-11,524,000,000
+2022A - OWC: $46,000,000
+2021A - OWC: $-8,509,000,000
+
+ Year-over-Year Change in Operating Working Capital (ΔOWC):
+2023A - ΔOWC: $-7,161,000,000
+2022A - ΔOWC: $11,570,000,000
+2021A - ΔOWC: $-8,555,000,000
+
+ Total Debt and Cash & Cash Equivalents:
+Total Debt (2024A): $14,300,000,000
+  ↳ Short-Term Debt: $2,300,000,000
+  ↳ Long-Term Debt:  $12,000,000,000
+Cash & Cash Equivalents (2024A): $23,466,000,000
+
+ Shares Outstanding:
+Shares Outstanding (2024A): 12,211,000,000 shares
+🛠️ Entered write_to_excel function...
+Opened Excel and selected sheet
